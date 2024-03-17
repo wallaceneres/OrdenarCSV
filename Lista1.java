@@ -21,6 +21,7 @@ public class Lista1 {
             switch (choice) {
                 case 1:
                     System.out.println("Opção 1 selecionada: Ler arquivo");
+                        scanner.nextLine();
                         OpenFile openFile = new OpenFile();
                         openFile.read();
                     break;

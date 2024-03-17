@@ -4,14 +4,14 @@ public class Item
 {
 
     private String game;
-    private String classification;
-    private String score;
+    private String category;
+    private Double rating;
 
-    public Item(String game, String classification, String score)
+    public Item(String game, String category, Double rating)
     {
         this.game = game;
-        this.classification = classification;
-        this.score = score;
+        this.category = category;
+        this.rating = rating;
     }
 
     public String getGame() {
@@ -22,32 +22,28 @@ public class Item
         this.game = game;
     }
 
-    public String getClassification() {
-        return classification;
+    public String getcategory() {
+        return category;
     }
 
-    public void setClassification(String classification) {
-        this.classification = classification;
+    public void setcategory(String category) {
+        this.category = category;
     }
 
-    public int getScore() {
-        return score;
+    public Double getrating() {
+        return rating;
     }
 
-    public void setScore(int score) {
-        this.score = score;
-    }
-
-    public void setItens(Item[] itens) {
-        this.game = game;
+    public void setrating(Double rating) {
+        this.rating = rating;
     }
 
     @Override
     public String toString() {
         return "Item{" +
                 "game='" + game + '\'' +
-                ", classification='" + classification + '\'' +
-                ", score=" + score +
+                ", category='" + category + '\'' +
+                ", rating=" + rating +
                 '}';
     }
 
