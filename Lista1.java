@@ -1,11 +1,12 @@
 import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
+//import java.io.File;
+//import java.io.FileNotFoundException;
 
 public class Lista1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int choice;
+        Item[] item = {};
 
         do {
             System.out.println("MENU:");
@@ -15,19 +16,33 @@ public class Lista1 {
             System.out.println("[4] Sair");
             System.out.print("Escolha uma opção: ");
 
+            //Le o dado inserido pelo usuario
             choice = scanner.nextInt();
-            scanner.nextLine(); // Consumir a quebra de linha após a entrada do número
+            //Insere quebra de linha após a leitura do dado digitado.
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
                     System.out.println("Opção 1 selecionada: Ler arquivo");
-                        scanner.nextLine();
+                        //scanner.nextLine();
                         OpenFile openFile = new OpenFile();
-                        openFile.read();
+                        item = openFile.read();
                     break;
                 case 2:
                     System.out.println("Opção 2 selecionada: Ordenar por categoria");
-                    // Chame a função para ordenar por categoria aqui
+                    for (Item games : item)
+                    {
+                        System.out.println(games);
+                    }
+                    System.out.println("-----------------------------------");
+                    SelectionSort.selectionSort(item);
+
+                    for (Item games : item)
+                    {
+                        System.out.println(games);
+                    }
+
+
                     break;
                 case 3:
                     System.out.println("Opção 3 selecionada: Ordenar por avaliação");

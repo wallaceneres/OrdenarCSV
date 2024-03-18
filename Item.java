@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Item
 {
 
@@ -9,9 +7,9 @@ public class Item
 
     public Item(String game, String category, Double rating)
     {
-        this.game = game;
-        this.category = category;
-        this.rating = rating;
+        setGame(game);
+        setcategory(category);
+        setrating(rating);
     }
 
     public String getGame() {
@@ -40,8 +38,7 @@ public class Item
 
     @Override
     public String toString() {
-        return "Item{" +
-                "game='" + game + '\'' +
+        return  "game='" + game + '\'' +
                 ", category='" + category + '\'' +
                 ", rating=" + rating +
                 '}';
