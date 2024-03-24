@@ -32,13 +32,13 @@ public class Lista1 {
 
                 case 2:
 
-                    SortMethods.selectionSort(item);
-                    openFile.saveFile(item);
+                    SortMethods.bubbleSort(item);
+                    openFile.saveFile(item, "JogosOrdenadosporCategoria");
                     break;
-                    
+
                 case 3:
-                    System.out.println("Opção 3 selecionada: Ordenar por avaliação");
-                    // Chame a função para ordenar por avaliação aqui
+                    SortMethods.selectionSort(item);
+                    openFile.saveFile(item, "JogosOrdenadosporAvaliacao");
                     break;
                 case 4:
                     System.out.println("Saindo...");

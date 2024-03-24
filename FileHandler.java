@@ -27,9 +27,6 @@ public class FileHandler{
                 // Dividir a linha em colunas usando a vírgula como separador
                 String[] columns = line.split(",");
                 // Cada coluna é salva em uma variavel.
-                // String game = columns[0];
-                //String category = columns[1];
-                //Double rating = Double.parseDouble(columns[2]);
                 //O objeto Item é instanciado e salvo dentro de uma posição dentro do vetor item do tipo Item
                 item[i] = new Item(columns[0], columns[1], columns[2]);
         
@@ -73,10 +70,11 @@ public class FileHandler{
         return lineCount;
     }
 
-    public void saveFile(Item[] item)
+    public void saveFile(Item[] item, String fileName)
     {
 
-        String csvFile = "C:\\Users\\Wallace\\Desktop\\Projeto faculdade\\Save Path\\lista3.csv";
+        String csvFile = "C:\\Users\\Wallace\\Desktop\\Projeto faculdade\\Save Path\\" + fileName + ".csv";
+
         try (FileWriter writer = new FileWriter(csvFile)) {
             for (Item items : item) {
                 writer.write(items.getGame() + "," + items.getCategory() + "," + items.getRating() + "\n");
