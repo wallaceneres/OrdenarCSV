@@ -29,19 +29,9 @@ public class Lista1 {
                         item = openFile.read();
                     break;
                 case 2:
-                    System.out.println("Opção 2 selecionada: Ordenar por categoria");
-                    for (Item games : item)
-                    {
-                        System.out.println(games);
-                    }
-                    System.out.println("-----------------------------------");
                     SelectionSort.selectionSort(item);
-
-                    for (Item games : item)
-                    {
-                        System.out.println(games);
-                    }
-
+                    OpenFile openFiles = new OpenFile();
+                    openFiles.saveFile(item);
 
                     break;
                 case 3:

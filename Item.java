@@ -8,7 +8,7 @@ public class Item
     public Item(String game, String category, Double rating)
     {
         setGame(game);
-        setcategory(category);
+        setCategory(category);
         setrating(rating);
     }
 
@@ -20,11 +20,11 @@ public class Item
         this.game = game;
     }
 
-    public String getcategory() {
+    public String getCategory() {
         return category;
     }
 
-    public void setcategory(String category) {
+    public void setCategory(String category) {
         this.category = category;
     }
 

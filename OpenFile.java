@@ -1,6 +1,8 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class OpenFile{
 
@@ -69,5 +71,20 @@ public class OpenFile{
         }
 
         return lineCount;
+    }
+
+    public void saveFile(Item[] item)
+    {
+
+        String csvFile = "C:\\Users\\Wallace\\Desktop\\Projeto faculdade\\Save Path\\lista3.csv";
+        try (FileWriter writer = new FileWriter(csvFile)) {
+            for (Item items : item) {
+                writer.write(items.getGame() + "," + items.getCategory() + "," + items.getrating() + "\n");
+            }
+            System.out.println("Dados gravados com sucesso no arquivo " + csvFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } 
+
     }
 }
