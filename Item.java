@@ -5,11 +5,11 @@ public class Item
     private String category;
     private Double rating;
 
-    public Item(String game, String category, Double rating)
+    public Item(String game, String category, String rating)
     {
         setGame(game);
         setCategory(category);
-        setrating(rating);
+        setRating(rating);
     }
 
     public String getGame() {
@@ -28,12 +28,12 @@ public class Item
         this.category = category;
     }
 
-    public Double getrating() {
+    public Double getRating() {
         return rating;
     }
 
-    public void setrating(Double rating) {
-        this.rating = rating;
+    public void setRating(String rating) {
+        this.rating = Double.parseDouble(rating);
     }
 
     @Override

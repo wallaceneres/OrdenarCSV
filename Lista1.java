@@ -21,19 +21,21 @@ public class Lista1 {
             //Insere quebra de linha após a leitura do dado digitado.
             scanner.nextLine();
 
+            FileHandler openFile = new FileHandler();
+
             switch (choice) {
                 case 1:
-                    System.out.println("Opção 1 selecionada: Ler arquivo");
-                        //scanner.nextLine();
-                        OpenFile openFile = new OpenFile();
-                        item = openFile.read();
-                    break;
-                case 2:
-                    SelectionSort.selectionSort(item);
-                    OpenFile openFiles = new OpenFile();
-                    openFiles.saveFile(item);
 
+                    System.out.println("Opção 1 selecionada: Ler arquivo");
+                    item = openFile.read();
                     break;
+
+                case 2:
+
+                    SortMethods.selectionSort(item);
+                    openFile.saveFile(item);
+                    break;
+                    
                 case 3:
                     System.out.println("Opção 3 selecionada: Ordenar por avaliação");
                     // Chame a função para ordenar por avaliação aqui

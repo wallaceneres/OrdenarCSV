@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class OpenFile{
+public class FileHandler{
 
     public Item[] read() {
         String filePath = "C:\\Users\\Wallace\\Desktop\\Projeto faculdade\\Unordered Documents\\lista3.csv";
@@ -27,11 +27,11 @@ public class OpenFile{
                 // Dividir a linha em colunas usando a vírgula como separador
                 String[] columns = line.split(",");
                 // Cada coluna é salva em uma variavel.
-                String game = columns[0];
-                String category = columns[1];
-                Double rating = Double.parseDouble(columns[2]);
+                // String game = columns[0];
+                //String category = columns[1];
+                //Double rating = Double.parseDouble(columns[2]);
                 //O objeto Item é instanciado e salvo dentro de uma posição dentro do vetor item do tipo Item
-                item[i] = new Item(game, category, rating);
+                item[i] = new Item(columns[0], columns[1], columns[2]);
         
                 i++;
             }
@@ -79,7 +79,7 @@ public class OpenFile{
         String csvFile = "C:\\Users\\Wallace\\Desktop\\Projeto faculdade\\Save Path\\lista3.csv";
         try (FileWriter writer = new FileWriter(csvFile)) {
             for (Item items : item) {
-                writer.write(items.getGame() + "," + items.getCategory() + "," + items.getrating() + "\n");
+                writer.write(items.getGame() + "," + items.getCategory() + "," + items.getRating() + "\n");
             }
             System.out.println("Dados gravados com sucesso no arquivo " + csvFile);
         } catch (IOException e) {
