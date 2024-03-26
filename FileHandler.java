@@ -7,7 +7,7 @@ import java.io.IOException;
 public class FileHandler{
 
     public Item[] read() {
-        String filePath = "C:\\Users\\Wallace\\Desktop\\Projeto faculdade\\Unordered Documents\\lista3.csv";
+        String filePath = "C:\\Users\\Wallace\\Desktop\\Projeto faculdade\\Unordered Documents\\JogosDesordenados.csv";
         //variavel para guardar a contagem de linhas dentro do arquivo .csv
         int numLines = countLines(filePath);
         //declaracao da variavel item com a alocação correta com a quantidade de posicoes necessárias.

@@ -1,6 +1,4 @@
 import java.util.Scanner;
-//import java.io.File;
-//import java.io.FileNotFoundException;
 
 public class Lista1 {
     public static void main(String[] args) {
