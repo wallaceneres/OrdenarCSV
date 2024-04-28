@@ -30,7 +30,7 @@ public class SortMethods {
             //itera sobre cada posicao do vetor
             for (int i = 1; i < n; i++) {
                 //compara a posicao atual do vetor com a posicao anterior utilizando o metodo .compareTo, se for positivo retorna 1 e os vetores são trocados de posicao.
-                if (item[i - 1].getGame().compareTo(item[i].getGame()) > 0) {
+                if (item[i - 1].getCategory().compareTo(item[i].getCategory()) > 0) {
                     Item temp = item[i - 1];
                     item[i - 1] = item[i];
                     item[i] = temp;
