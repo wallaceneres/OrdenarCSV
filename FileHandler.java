@@ -7,7 +7,7 @@ import java.io.IOException;
 public class FileHandler{
 
     public Item[] read() {
-        String filePath = "C:\\Users\\Wallace\\Desktop\\Projeto faculdade\\Unordered Documents\\JogosDesordenados.csv";
+        String filePath = "Unordered Documents\\JogosDesordenados.csv";
         //variavel para guardar a contagem de linhas dentro do arquivo .csv
         int numLines = countLines(filePath);
         //declaracao da variavel item com a alocação correta com a quantidade de posicoes necessárias.
@@ -73,7 +73,7 @@ public class FileHandler{
     public void saveFile(Item[] item, String fileName)
     {
 
-        String csvFile = "C:\\Users\\Wallace\\Desktop\\Projeto faculdade\\Save Path\\" + fileName + ".csv";
+        String csvFile = "Save Path\\" + fileName + ".csv";
 
         try (FileWriter writer = new FileWriter(csvFile)) {
             for (Item items : item) {
